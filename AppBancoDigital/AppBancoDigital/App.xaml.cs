@@ -1,5 +1,7 @@
-﻿using AppBancoDigital.View;
+﻿using AppBancoDigital.Model;
+using AppBancoDigital.View;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +15,22 @@ namespace AppBancoDigital
 
             MainPage = new Login();
         }
+
+        public List<DadosUsuario> lista_usuarios = new List<DadosUsuario>
+        {
+            new DadosUsuario()
+            {
+                Usuario = "aluno@etec",
+                Nome = "Aluno",
+                Senha = "123"
+            },
+            new DadosUsuario()
+            {
+                Usuario = "adib",
+                Nome = "adib",
+                Senha = "1235"
+            },
+        };
 
         protected override void OnStart()
         {

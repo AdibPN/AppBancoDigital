@@ -1,5 +1,4 @@
 ﻿using AppBancoDigital.Model;
-using AppBancoDigital.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

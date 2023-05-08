@@ -3,48 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Login">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            BackgroundColor="Black">
 
-
-            <Image x:Name="img" HeightRequest="95" Margin="0,90,0,0" />
-
-
-
-
-
+            <Image x:Name="Logo" HeightRequest="450" Margin="-90,-190,0,-300" VerticalOptions="CenterAndExpand" />
 
             <Frame CornerRadius="10"
                    BorderColor="Black"
-                   BackgroundColor="Green"
+                   BackgroundColor="Black"
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="CenterAndExpand"
                    HeightRequest="300"
                    WidthRequest="340">
 
-                <StackLayout VerticalOptions="CenterAndExpand" Margin="5">
-                    <Label Text="Usuário:" FontSize="23" TextColor="White" Margin="5" Style="{StaticResource fontePersonalizada}"/>
+                <StackLayout VerticalOptions="CenterAndExpand" Margin="5" Background="black" BackgroundColor="Black">
+
+                    <Label Text="Usuário:" FontSize="23" TextColor="Khaki" Margin="5" />
 
                     <Entry x:Name="txtUser"
                            BackgroundColor="Transparent"
 			               FontSize="20"
                            HeightRequest="40"
                            Placeholder="Digite seu usuário de acesso."
-                           PlaceholderColor="White"
+                           PlaceholderColor="Khaki"
                            TextColor="White"
                            MaxLength="20"
-                           Style="{StaticResource fontePersonalizada}"/>
+                           />
 
                     <Label FontSize="1" Margin="5"/>
 
-                    <Label Text="Senha:" FontSize="23" TextColor="White" Margin="5" Style="{StaticResource fontePersonalizada}"/>
+                    <Label Text="Senha:" FontSize="23" TextColor="Khaki" Margin="5" />
 
                     <Entry x:Name="txtSenha"
                            BackgroundColor="Transparent"
 			               FontSize="20"
                            HeightRequest="40"
                            Placeholder="Digite sua senha de acesso."
-                           PlaceholderColor="White"
-                           TextColor="White"
+                           PlaceholderColor="Khaki"
+                           TextColor="Khaki"
                            IsPassword="True"
                            />
 
@@ -53,17 +49,17 @@
                     <Label FontSize="1" Margin="5"/>
 
                     <Button x:Name="btnLogin"
-                            BorderColor="White"
+                            BorderColor="Khaki"
                             BorderWidth="1"
                             CornerRadius="10"
                             HeightRequest="40"
                             WidthRequest="50"
                             BackgroundColor="Transparent"
                             Text="Entrar"
-                            TextColor="White"
+                            TextColor="Khaki"
                             Clicked="btnLogin_Clicked"
                             FontSize="18"
-                            Style="{StaticResource fontePersonalizada}"/>
+                            />
 
 
                 </StackLayout>
