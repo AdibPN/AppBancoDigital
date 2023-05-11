@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Inicio">
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="Black">
+
+            <Image x:Name="Logo" HeightRequest="450" Margin="-100,-190,0,-200" VerticalOptions="CenterAndExpand" />
+            
+
+            <Button x:Name="btnEntrar"
+                            BorderColor="Khaki"
+                            BorderWidth="1"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            WidthRequest="50"
+                            BackgroundColor="Transparent"
+                            Text="Começar"
+                            TextColor="Khaki"
+                            Clicked="btnEntrar_Clicked"
+                            FontSize="18"
+                            />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

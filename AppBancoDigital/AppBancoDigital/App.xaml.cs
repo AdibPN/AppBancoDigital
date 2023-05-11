@@ -13,7 +13,7 @@ namespace AppBancoDigital
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new Inicio();
         }
 
         public List<DadosUsuario> lista_usuarios = new List<DadosUsuario>
