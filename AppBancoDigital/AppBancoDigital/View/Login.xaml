@@ -59,15 +59,21 @@
                             TextColor="Khaki"
                             Clicked="btnLogin_Clicked"
                             FontSize="18"
-                            />
+                    />
+
+                    <Button Text="Novo Correntista" FontSize="Small" Clicked="Button_Clicked" BackgroundColor="Transparent"  TextColor="Khaki"/>
 
 
                 </StackLayout>
 
+       
 
 
-
-            </Frame>
+        </Frame>
         </StackLayout>
+
+        
+        
+        
     </ContentPage.Content>
 </ContentPage>

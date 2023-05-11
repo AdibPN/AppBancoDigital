@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.NovoUsuario"
+             BackgroundColor="#000000">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Fill"
+            BackgroundColor="#000000"
+                     >
+            <StackLayout
+                VerticalOptions="Center"
+                BackgroundColor="WhiteSmoke"
+                HeightRequest="470"
+                WidthRequest="200"
+                >
+                <Label Text="Nome:" FontSize="Medium" Padding="30,10,30,10"/>
+                <Entry x:Name="txtNome"/>
+
+                <Label Text="CPF:" FontSize="Medium" Padding="30,10,30,10"/>
+                <Entry x:Name="txtCPF"/>
+
+                <Label Text="Data de Nascimento:" FontSize="Medium" Padding="30,10,30,10"/>
+                <DatePicker x:Name="txtDataNasc"/>
+
+                <Label Text="Senha: " FontSize="Medium" Padding="30,10,30,10"/>
+                <Entry x:Name="txtSenha"/>
+
+                <Button Text="Cadastrar" Clicked="Button_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
