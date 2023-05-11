@@ -6,7 +6,7 @@
         <StackLayout
             BackgroundColor="Black">
 
-            <Image x:Name="Logo" HeightRequest="450" Margin="-90,-190,0,-300" VerticalOptions="CenterAndExpand" />
+            <Image x:Name="Logo" HeightRequest="300" Margin="-90,-190,0,-300" VerticalOptions="CenterAndExpand" />
 
             <Frame CornerRadius="10"
                    BorderColor="Black"
@@ -48,7 +48,15 @@
 
                     <Label FontSize="1" Margin="5"/>
 
-                    <Button x:Name="btnLogin"
+
+                </StackLayout>
+
+       
+
+
+        </Frame>
+            
+            <Button x:Name="btnLogin"
                             BorderColor="Khaki"
                             BorderWidth="1"
                             CornerRadius="10"
@@ -61,15 +69,12 @@
                             FontSize="18"
                     />
 
-                    <Button Text="Novo Correntista" FontSize="Small" Clicked="Button_Clicked" BackgroundColor="Transparent"  TextColor="Khaki"/>
-
-
-                </StackLayout>
-
-       
-
-
-        </Frame>
+            <Button Text="Novo Correntista"
+                            FontSize="Small"
+                            Clicked="Button_Clicked_2"
+                            BackgroundColor="Transparent"
+                            TextColor="Khaki"
+                    />
         </StackLayout>
 
         
