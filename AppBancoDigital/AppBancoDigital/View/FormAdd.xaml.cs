@@ -29,7 +29,7 @@ namespace AppBancoDigital.View
                 Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
                 {
                     Nome = txt_nome.Text,
-                    Data_Nascimento = dtpck_data_nasc.Date
+                    Data_Nasc = dtpck_data_nasc.ToString(),
                 });
 
                 string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";

@@ -7,28 +7,51 @@
         <StackLayout
             VerticalOptions="Center"
             HorizontalOptions="Fill"
-            BackgroundColor="#000000"
-                     >
-            <StackLayout
-                VerticalOptions="Center"
-                BackgroundColor="WhiteSmoke"
-                HeightRequest="470"
-                WidthRequest="200"
+            BackgroundColor="#000000">
+
+            <Label Text="Cadastre-se!"
+                   TextColor="#000000"
+                   BackgroundColor="#000000"
+                   Margin="100"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="Start"
+                   />
+            <Frame
+                CornerRadius="10"  
+                BorderColor="Khaki"
+                BackgroundColor="#000000"
+                VerticalOptions="EndAndExpand"
+                Padding="0"
+                
                 >
-                <Label Text="Nome:" FontSize="Medium" Padding="30,10,30,10"/>
-                <Entry x:Name="txtNome"/>
+                <StackLayout
+                VerticalOptions="Center"
+                BackgroundColor="#000000"
+                HeightRequest="470"
+                WidthRequest="200">
+                    <Label Text="Nome:" FontSize="Medium" Padding="30,10,30,10" TextColor="Khaki" />
+                    <Entry x:Name="txtNome"/>
 
-                <Label Text="CPF:" FontSize="Medium" Padding="30,10,30,10"/>
-                <Entry x:Name="txtCPF"/>
+                    <Label Text="CPF:" FontSize="Medium" Padding="30,10,30,10" TextColor="Khaki"/>
+                    <Entry x:Name="txtCPF"/>
 
-                <Label Text="Data de Nascimento:" FontSize="Medium" Padding="30,10,30,10"/>
-                <DatePicker x:Name="txtDataNasc"/>
+                    <Label Text="Data de Nascimento:" FontSize="Medium" Padding="30,10,30,10" TextColor="Khaki"/>
+                    <DatePicker x:Name="txtDataNasc"/>
 
-                <Label Text="Senha: " FontSize="Medium" Padding="30,10,30,10"/>
-                <Entry x:Name="txtSenha"/>
+                    <Label Text="Senha: " FontSize="Medium" Padding="30,10,30,10" TextColor="Khaki"/>
+                    <Entry x:Name="txtSenha"/>
 
-                <Button Text="Cadastrar" Clicked="Button_Clicked"/>
-            </StackLayout>
+                    <Button Text="Cadastrar" Clicked="Button_Clicked" BackgroundColor="Transparent" 
+                            TextColor="#000000"/>
+                </StackLayout>
+                
+
+            </Frame>
+            
+            
 
         </StackLayout>
     </ContentPage.Content>

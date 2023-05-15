@@ -6,7 +6,7 @@
         <StackLayout
             BackgroundColor="Black">
 
-            <Image x:Name="Logo" HeightRequest="300" Margin="-90,-190,0,-300" VerticalOptions="CenterAndExpand" />
+            <Image x:Name="Logo" HeightRequest="300" Margin="30,40,30,80" VerticalOptions="CenterAndExpand" />
 
             <Frame CornerRadius="10"
                    BorderColor="Black"
@@ -51,10 +51,7 @@
 
                 </StackLayout>
 
-       
-
-
-        </Frame>
+            </Frame>
             
             <Button x:Name="btnLogin"
                             BorderColor="Khaki"
@@ -73,7 +70,7 @@
                             FontSize="Small"
                             Clicked="Button_Clicked_2"
                             BackgroundColor="Transparent"
-                            TextColor="Khaki"
+                            TextColor="#4F4F4F"
                     />
         </StackLayout>
 
