@@ -29,19 +29,24 @@ namespace AppBancoDigital.View
                 Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
                 {
                     Nome = txt_nome.Text,
-                    Data_Nasc = dtpck_data_nasc.ToString(),
+                    CPF= txt_cpf.Text,
+                    Senha = txt_Senha.Text,
+                    Data_Nascimento = dtpck_data_nasc.Date,
                 });
 
-                string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";
+                if (c.Id != null)
+                {
+                    string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";
 
-                await DisplayAlert("Sucesso!", msg, "OK");
+                    await DisplayAlert("Sucesso!", msg, "OK");
 
-                await Navigation.PushAsync(new View.Listagem());
+                    await Navigation.PushAsync(new View.Listagem());
+                } else
+                    throw new Exception("Erro, correntista não cadastrado");                
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
-
             }
             finally
             {
