@@ -10,25 +10,23 @@ using Xamarin.Forms.Xaml;
 namespace AppBancoDigital.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Listagem : ContentPage
+    public partial class TelaInicial : ContentPage
     {
-        public Listagem()
+        public TelaInicial()
         {
-            InitializeComponent();
-        }
-
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-
+            /*InitializeComponent();
+            txt_correntista.Text = App.DadosCorrentista.Nome;*/
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            /*Navigation.PushAsync(new View.Pix.EnviarPix());*/
 
         }
 
-        private void MenuItem_Clicked(object sender, EventArgs e)
+        private void Button_Clicked_1(object sender, EventArgs e)
         {
+            /*Navigation.PushAsync(new View.Pix.ReceberPix());*/
 
         }
     }

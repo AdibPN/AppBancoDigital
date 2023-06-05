@@ -18,41 +18,40 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
         }
-
-        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+  
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            act_carregando.IsRunning = true;
-            act_carregando.IsVisible = true;
-
             try
             {
-                Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
+                Model.Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
                 {
                     Nome = txt_nome.Text,
-                    CPF= txt_cpf.Text,
+                    CPF = txt_cpf.Text,
                     Senha = txt_Senha.Text,
                     Data_Nascimento = dtpck_data_nasc.Date,
                 });
 
                 if (c.Id != null)
                 {
-                    string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";
-
-                    await DisplayAlert("Sucesso!", msg, "OK");
+                    App.DadosCorrentista = c;
 
                     await Navigation.PushAsync(new View.Listagem());
-                } else
-                    throw new Exception("Erro, correntista não cadastrado");                
+                }
+                else
+                    throw new Exception("Erro, correntista não cadastrado");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops", ex.Message, "OK");
+                Console.WriteLine(ex.StackTrace);
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
-            finally
-            {
-                act_carregando.IsRunning = false;
-                act_carregando.IsVisible = false;
-            }
+            
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+
         }
     }
 }

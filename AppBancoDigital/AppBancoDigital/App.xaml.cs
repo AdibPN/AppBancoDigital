@@ -9,11 +9,14 @@ namespace AppBancoDigital
 {
     public partial class App : Application
     {
+
+        public static Model.Correntista DadosCorrentista { get; set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Inicio();
+            MainPage = new NavigationPage(new View.Login());
         }
 
         public List<DadosUsuario> lista_usuarios = new List<DadosUsuario>

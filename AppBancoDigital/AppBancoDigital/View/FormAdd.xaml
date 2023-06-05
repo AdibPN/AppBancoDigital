@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.FormAdd"
     Title="Cadastro de Correntista">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
-    </ContentPage.ToolbarItems>
-
+ 
     <ContentPage.Content>
         <StackLayout>
 
@@ -18,13 +14,25 @@
                     <Label Text="Nome: " />
                     <Entry x:Name="txt_nome" />
                     <Label Text="Cpf: " />
-                    <Entry x:Name="txt_cpf" />
-                    <Label Text="Senha: " />
-                    <Entry x:Name="txt_Senha" />
+                    <Entry x:Name="txt_cpf" Keyboard="Numeric"/>
+
+                    <Frame Margin="10" BackgroundColor="#eee">
+                        <StackLayout>
+                            <Label Text="Senha: " />
+                            <Entry x:Name="txt_Senha" IsPassword="True" />
+
+                        </StackLayout>
+                    </Frame>
+
                     <Label Text="Data Nascimento: " />
                     <DatePicker x:Name="dtpck_data_nasc" />
+
+                    <Button Text="Cadastrar" Clicked="Button_Clicked" />
                 </StackLayout>
             </Frame>
+
+            <Button Text="Fazer Login" Clicked="Button_Clicked_1" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

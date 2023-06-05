@@ -14,13 +14,13 @@
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="CenterAndExpand"
                    HeightRequest="300"
-                   WidthRequest="340">
+                   WidthRequest="340">  
 
                 <StackLayout VerticalOptions="CenterAndExpand" Margin="5" Background="black" BackgroundColor="Black">
 
                     <Label Text="Usuário:" FontSize="23" TextColor="Khaki" Margin="5" />
 
-                    <Entry x:Name="txtUser"
+                    <Entry x:Name="txt_cpf"
                            BackgroundColor="Transparent"
 			               FontSize="20"
                            HeightRequest="40"

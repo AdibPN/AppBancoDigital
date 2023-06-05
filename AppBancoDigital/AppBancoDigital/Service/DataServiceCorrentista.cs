@@ -23,6 +23,22 @@ namespace AppBancoDigital.Service
         /**
          * Envia um Model em forma de JSON ara insert no banco.
          */
+
+
+        public static async Task<Correntista> LoginAsync(Correntista c)
+        {
+            var json_a_enviar = JsonConvert.SerializeObject(c);
+
+            Console.WriteLine("__________________________________________________________________");
+            Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine("__________________________________________________________________");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/entrar");
+
+            return JsonConvert.DeserializeObject<Correntista>(json);
+        }
+
         public static async Task<Correntista> Cadastrar(Correntista c)
         {
             var json_a_enviar = JsonConvert.SerializeObject(c);
@@ -35,6 +51,20 @@ namespace AppBancoDigital.Service
             Correntista C = JsonConvert.DeserializeObject<Correntista>(json);
 
             return C;
+        }
+
+        public static async Task<Correntista> SaveAsync(Correntista c)
+        {
+            var json_a_enviar = JsonConvert.SerializeObject(c);
+
+            Console.WriteLine("__________________________________________________________________");
+            Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine("__________________________________________________________________");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/salvar");
+
+            return JsonConvert.DeserializeObject<Correntista>(json);
         }
 
     }
