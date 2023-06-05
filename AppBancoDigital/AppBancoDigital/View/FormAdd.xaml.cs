@@ -35,7 +35,8 @@ namespace AppBancoDigital.View
                 {
                     App.DadosCorrentista = c;
 
-                    await Navigation.PushAsync(new View.Listagem());
+                    await Navigation.PushAsync(new View.TelaInicial());
+
                 }
                 else
                     throw new Exception("Erro, correntista não cadastrado");

@@ -19,7 +19,7 @@ namespace AppBancoDigital
             MainPage = new NavigationPage(new View.Login());
         }
 
-        public List<DadosUsuario> lista_usuarios = new List<DadosUsuario>
+        /*public List<DadosUsuario> lista_usuarios = new List<DadosUsuario>
         {
             new DadosUsuario()
             {
@@ -33,7 +33,7 @@ namespace AppBancoDigital
                 Nome = "adib",
                 Senha = "1235"
             },
-        };
+        };*/
 
         protected override void OnStart()
         {
