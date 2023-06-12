@@ -18,7 +18,7 @@
 
                 <StackLayout VerticalOptions="CenterAndExpand" Margin="5" Background="black" BackgroundColor="Black">
 
-                    <Label Text="Usuário:" FontSize="23" TextColor="Khaki" Margin="5" />
+                    <Label Text="CPF:" FontSize="23" TextColor="Khaki" Margin="5" />
 
                     <Entry x:Name="txt_cpf"
                            BackgroundColor="Transparent"
