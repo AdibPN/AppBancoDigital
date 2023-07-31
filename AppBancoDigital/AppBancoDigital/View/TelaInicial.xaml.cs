@@ -14,8 +14,8 @@ namespace AppBancoDigital.View
     {
         public TelaInicial()
         {
-            /*InitializeComponent();
-            txt_correntista.Text = App.DadosCorrentista.Nome;*/
+            InitializeComponent();
+            txt_correntista.Text = App.DadosCorrentista.Nome;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
