@@ -4,19 +4,32 @@
              x:Class="AppBancoDigital.View.TelaInicial">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="txt_correntista" />
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Seu saldo é de " />
-                            <Span Text="Et₵ 1.000,00 " TextColor="Red" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Button Text="Fazer Pix" Clicked="Button_Clicked" />
-            <Button Text="Receber Pix" Clicked="Button_Clicked_1"/>
+            <!-- Header + Title Área Pix -->
+            <StackLayout>
+                
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *">
+                    
+                    <Label Text="X" Grid.Row="0" Grid.Column="0" Padding="15,0,0,15"  BackgroundColor="Black"/>
+                    <Label HorizontalOptions="End" Text="?" Grid.Row="0" Grid.Column="1" Padding="15,15,0,0" BackgroundColor="Black" />
+                    <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black">
+                        <Label Text="Área Pix" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Padding="0,0,15,15" FontSize="28" TextColor="Khaki" />
+                        <Label Text="Envie e receba pagamento a qualquer hora e dia da semana, sem pagar nada por isso." Padding="0,0,0,15" FontSize="20" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <!-- Enviar -->
+            <StackLayout>
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *, *"  BackgroundColor="Black">
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Enviar" FontSize="22" Padding="0,0,0,15" FontAttributes="Bold"  TextColor="White"/>
+                    <!-- Tranferir -->
+                    <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_transferir2" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="onClickPageTransferir" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Transferir" HorizontalOptions="Center" Grid.Row="4"  Grid.Column="0" />
+                </Grid>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
