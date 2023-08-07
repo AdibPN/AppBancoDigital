@@ -16,7 +16,12 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            usuario.Source = ImageSource.FromResource("AppBancoDigital.Image.usuario.png");
             img_transferir2.Source = ImageSource.FromResource("AppBancoDigital.Image.img_transferir2.PNG");
+            img_pix.Source = ImageSource.FromResource("AppBancoDigital.Image.109617.png");
+            LOGOTIPO.Source = ImageSource.FromResource("AppBancoDigital.Image.Logo.PNG");
+            mudar.Source = ImageSource.FromResource("AppBancoDigital.img_mudar.Logo.PNG");
+            
         }
 
         //private void Button_Clicked(object sender, EventArgs e)

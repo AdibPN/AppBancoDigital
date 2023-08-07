@@ -17,17 +17,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Image\109617.png" />
     <None Remove="Image\img_transferir.PNG" />
     <None Remove="Image\img_transferir2.PNG" />
     <None Remove="Image\Logo.PNG" />
+    <None Remove="Image\mudar.png" />
+    <None Remove="Image\usuario.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Image\109617.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Image\img_transferir2.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Image\Logo.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\mudar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 

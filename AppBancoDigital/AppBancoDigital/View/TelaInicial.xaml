@@ -6,20 +6,26 @@
         <StackLayout>
             <!-- Header + Title Área Pix -->
             <StackLayout>
-                
+                <Image x:Name="LOGOTIPO" HeightRequest="200" VerticalOptions="CenterAndExpand" BackgroundColor="Black" />
                 <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *">
+                   <!-- <Label HorizontalOptions="End" Text="?" Grid.Row="0" Grid.Column="1" Padding="15,15,0,0" BackgroundColor="Black" /> -->
                     
-                    <Label Text="X" Grid.Row="0" Grid.Column="0" Padding="15,0,0,15"  BackgroundColor="Black"/>
-                    <Label HorizontalOptions="End" Text="?" Grid.Row="0" Grid.Column="1" Padding="15,15,0,0" BackgroundColor="Black" />
-                    <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black">
-                        <Label Text="Área Pix" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Padding="0,0,15,15" FontSize="28" TextColor="Khaki" />
-                        <Label Text="Envie e receba pagamento a qualquer hora e dia da semana, sem pagar nada por isso." Padding="0,0,0,15" FontSize="20" TextColor="White"/>
+                    <Image x:Name="usuario" HeightRequest="5" Grid.Row="1" Grid.Column="0" />
+                    <Label Text="BEM-VINDO"  HorizontalOptions="Center" Grid.Row="1"  Grid.Column="1" />
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
+                        <Label Text="Área Pix" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Padding="0,0,15,15" FontSize="28" TextColor="Khaki" />
+                        <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="mudar" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="onClickPageTransferir" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Envie e receba pagamento a qualquer hora e dia da semana, sem pagar nada por isso." Padding="0,0,0,15" FontSize="20" TextColor="Black"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>
             <!-- Enviar -->
             <StackLayout>
-                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *, *"  BackgroundColor="White">
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *"  BackgroundColor="White">
                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Enviar" FontSize="22" Padding="0,0,0,15" FontAttributes="Bold"  TextColor="White"/>
                     <!-- Tranferir -->
                     <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_transferir2" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2">
@@ -28,6 +34,14 @@
                         </Image.GestureRecognizers>
                     </Image>
                     <Label Text="Transferir" HorizontalOptions="Center" Grid.Row="4"  Grid.Column="0" />
+
+                    <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_pix" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="PaginaEnviarPix" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+
                 </Grid>
             </StackLayout>
         </StackLayout>
