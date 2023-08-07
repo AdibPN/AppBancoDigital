@@ -19,7 +19,7 @@
             </StackLayout>
             <!-- Enviar -->
             <StackLayout>
-                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *, *"  BackgroundColor="Black">
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *, *"  BackgroundColor="White">
                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Enviar" FontSize="22" Padding="0,0,0,15" FontAttributes="Bold"  TextColor="White"/>
                     <!-- Tranferir -->
                     <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_transferir2" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2">
