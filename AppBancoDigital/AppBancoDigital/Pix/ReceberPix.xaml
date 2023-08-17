@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.Pix.ReceberPix">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
+            <GradientStop Color="#40E0D0" Offset="0.4" />
+            <GradientStop Color="#4F4F4F" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Ler um QR Code" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
