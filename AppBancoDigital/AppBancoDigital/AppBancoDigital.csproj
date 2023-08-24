@@ -16,6 +16,7 @@
     <None Remove="Image\img_transferir2.PNG" />
     <None Remove="Image\Logo.PNG" />
     <None Remove="Image\mudar.png" />
+    <None Remove="Image\qrcode.png" />
     <None Remove="Image\usuario.png" />
   </ItemGroup>
 
@@ -30,6 +31,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Image\mudar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\qrcode.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Image\usuario.png">

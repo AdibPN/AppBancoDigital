@@ -13,37 +13,47 @@
                     <Image x:Name="usuario" HeightRequest="5" Grid.Row="1" Grid.Column="0" />
                     <Label Text="BEM-VINDO"  HorizontalOptions="Center" Grid.Row="1"  Grid.Column="1" />
                     <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
-                        <Label Text="Área Pix" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Padding="0,0,15,15" FontSize="28" TextColor="Khaki" />
-                        <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="mudar" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer x:Name="onClickPageTransferir" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                        <Label Text="Área Pix" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Padding="0,0,15,15" FontSize="28" TextColor="Black"/>
+                        <!-- <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="mudar" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2"> -->
+                         <!--   <Image.GestureRecognizers> -->
+                          <!--      <TapGestureRecognizer x:Name="onClickPageTransferir" /> -->
+                         <!--   </Image.GestureRecognizers> -->
+                       <!-- </Image> -->
                         <Label Text="Envie e receba pagamento a qualquer hora e dia da semana, sem pagar nada por isso." Padding="0,0,0,15" FontSize="20" TextColor="Black"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>
             <!-- Enviar -->
+            
             <StackLayout>
                 <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, *"  BackgroundColor="White">
                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Enviar" FontSize="22" Padding="0,0,0,15" FontAttributes="Bold"  TextColor="White"/>
                     <!-- Tranferir -->
                     <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_transferir2" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="onClickPageTransferir" />
-                        </Image.GestureRecognizers>
                     </Image>
                     <Label Text="Transferir" HorizontalOptions="Center" Grid.Row="4"  Grid.Column="0" />
 
-                    <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="img_pix" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="PaginaEnviarPix" />
-                        </Image.GestureRecognizers>
+                    <ImageButton VerticalOptions="End" HorizontalOptions="Center" 
+                                 WidthRequest="30" HeightRequest="40" x:Name="img_pix"
+                                 Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"
+                                 Clicked="img_pix_Clicked"
+                     />
+
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="QRCode" FontSize="22" Padding="0,0,0,15" FontAttributes="Bold"  TextColor="White"/>
+                    <Image VerticalOptions="End" HorizontalOptions="Center" WidthRequest="30" HeightRequest="40" x:Name="qrcode" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2">
                     </Image>
+
+                    <ImageButton VerticalOptions="End" HorizontalOptions="Center" 
+                                 WidthRequest="30" HeightRequest="40" x:Name="img_code"
+                                 Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"
+                                 Clicked="img_pix_Clicked_1"
+                     />
+
 
 
                 </Grid>
             </StackLayout>
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
