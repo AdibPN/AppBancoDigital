@@ -21,8 +21,9 @@ namespace AppBancoDigital.View
             img_pix.Source = ImageSource.FromResource("AppBancoDigital.Image.109617.png");
             img_code.Source = ImageSource.FromResource("AppBancoDigital.Image.109617.png");
             LOGOTIPO.Source = ImageSource.FromResource("AppBancoDigital.Image.Logo.PNG");
+            qrcode.Source = ImageSource.FromResource("AppBancoDigital.Image.code.png");
             //mudar.Source = ImageSource.FromResource("AppBancoDigital.img_mudar.Logo.PNG");
-            
+
         }
 
 
@@ -33,7 +34,7 @@ namespace AppBancoDigital.View
 
         private void img_pix_Clicked_1(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Pix.PixExibirQrCode());
+            Navigation.PushAsync(new Pix.ReceberPix());
 
         }
 

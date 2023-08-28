@@ -3,16 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.Pix.ReceberPix">
 
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
-            <GradientStop Color="#40E0D0" Offset="0.4" />
-            <GradientStop Color="#4F4F4F" Offset="1.0" />
-        </LinearGradientBrush>
-    </ContentPage.Background>
+    <StackLayout>
+        <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*" BackgroundColor="Black">
+            <Image x:Name="logo" HeightRequest="200" VerticalOptions="CenterAndExpand" BackgroundColor="Black" Grid.Row="0" />
+            <Button CornerRadius="100" Text="Ler um QR Code" Clicked="Button_Clicked" Grid.Row="1" BackgroundColor="Black" TextColor="Khaki" BorderColor="Khaki" />
+        </Grid>
+    </StackLayout>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Ler um QR Code" Clicked="Button_Clicked" />
-        </StackLayout>
-    </ContentPage.Content>
 </ContentPage>
+  
+        
+          

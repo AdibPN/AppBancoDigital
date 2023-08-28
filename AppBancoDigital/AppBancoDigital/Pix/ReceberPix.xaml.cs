@@ -15,6 +15,9 @@ namespace AppBancoDigital.Pix
         public ReceberPix()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            logo.Source = ImageSource.FromResource("AppBancoDigital.Image.Logo.PNG");
+            
         }
 
         private void Button_Clicked(object sender, EventArgs e)
